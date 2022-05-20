@@ -22,6 +22,10 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
 
+  img {
+    -webkit-user-drag: none;
+  }
+
   button {
     border: 0;
     outline: 0;
