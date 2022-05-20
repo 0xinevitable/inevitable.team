@@ -28,6 +28,14 @@ const Container = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    transform: scale(0.8);
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 const Dot = styled.div`

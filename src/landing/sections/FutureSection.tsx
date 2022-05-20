@@ -28,6 +28,10 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    transform: scale(0.8);
+  }
 `;
 
 const Title = styled.span`

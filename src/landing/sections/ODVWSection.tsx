@@ -34,6 +34,10 @@ const AbsoluteForeground = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    transform: scale(0.8);
+  }
 `;
 
 const Graphic = styled.div`
@@ -43,6 +47,11 @@ const Graphic = styled.div`
   background-color: black;
   filter: drop-shadow(0px 16px 32px rgba(98, 0, 34, 0.46));
   border-radius: 44px;
+
+  @media screen and (max-width: 380px) {
+    width: 320px;
+    height: 320px;
+  }
 `;
 
 const Information = styled.div`
@@ -62,6 +71,11 @@ const Subtitle = styled.h3`
   letter-spacing: -0.05em;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+    line-height: 1.1;
+  }
 `;
 const Title = styled.h2`
   margin: 0;

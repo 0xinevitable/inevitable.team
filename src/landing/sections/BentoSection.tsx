@@ -31,12 +31,20 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    transform: scale(0.8);
+  }
 `;
 const Web3Emojis = styled.div`
   display: flex;
 
   & > img:not(:last-of-type) {
     margin-right: 32px;
+
+    @media screen and (max-width: 600px) {
+      margin-right: 16px;
+    }
   }
 `;
 const Web3Emoji = styled.img`
