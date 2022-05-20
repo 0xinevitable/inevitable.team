@@ -6,7 +6,7 @@ export const ODVWSection = () => {
       <Background src="/assets/background.png" />
 
       <AbsoluteForeground>
-        <Graphic />
+        <Graphic src="/assets/odvw-cube.webp" />
         <Information>
           <Subtitle>Everything in the world of</Subtitle>
           <Title>odvw</Title>
@@ -40,7 +40,7 @@ const AbsoluteForeground = styled.div`
   }
 `;
 
-const Graphic = styled.div`
+const Graphic = styled.img`
   width: 368px;
   height: 368px;
 
