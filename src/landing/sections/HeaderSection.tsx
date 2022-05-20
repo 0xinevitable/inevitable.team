@@ -4,7 +4,7 @@ export const HeaderSection = () => {
   return (
     <Container>
       <Dot />
-      <Title>Inevt</Title>
+      <Title>{`After Inevt it's web4`}</Title>
       <Description>
         web3
         <br />
