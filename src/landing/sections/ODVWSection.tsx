@@ -25,7 +25,7 @@ const Background = styled.img`
   height: 500px;
   width: 100vw;
 `;
-const AbsoluteForeground = styled.header`
+const AbsoluteForeground = styled.div`
   position: absolute;
   top: -159px;
   left: 0;
@@ -36,7 +36,7 @@ const AbsoluteForeground = styled.header`
   align-items: center;
 `;
 
-const Graphic = styled.header`
+const Graphic = styled.div`
   width: 368px;
   height: 368px;
 
@@ -45,7 +45,7 @@ const Graphic = styled.header`
   border-radius: 44px;
 `;
 
-const Information = styled.header`
+const Information = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -30,7 +30,7 @@ const Container = styled.header`
   align-items: center;
 `;
 
-const Dot = styled.header`
+const Dot = styled.div`
   margin-right: auto;
   width: 24px;
   height: 24px;

@@ -21,7 +21,7 @@ const LandingPage = () => {
 
 export default LandingPage;
 
-const Container = styled.header`
+const Container = styled.div`
   min-height: 100vh;
   background-color: white;
   position: relative;

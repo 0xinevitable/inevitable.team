@@ -32,7 +32,7 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
 `;
-const Web3Emojis = styled.header`
+const Web3Emojis = styled.div`
   display: flex;
 
   & > img:not(:last-of-type) {
