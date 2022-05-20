@@ -24,6 +24,7 @@ const Container = styled.section`
 const Background = styled.img`
   height: 500px;
   width: 100vw;
+  user-select: none;
 `;
 const AbsoluteForeground = styled.div`
   position: absolute;
