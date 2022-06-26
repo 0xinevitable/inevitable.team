@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     word-break: keep-all;
   }
 
+  html, body {
+    background-color: black;
+  }
+
   body {
     margin: 0;
   }

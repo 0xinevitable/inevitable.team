@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React from 'react';
 
 import { GlobalStyle } from '@/styles/GlobalStyle';
-import '@/styles/fonts.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap"
           rel="stylesheet"
         />
       </Head>
