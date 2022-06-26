@@ -1,7 +1,10 @@
 {
-  "name": "@inevit/landing",
+  "name": "inevitable.team",
   "version": "1.0.0",
   "private": true,
+  "repository": "https://github.com/inevitable-changes/inevitable.team",
+  "author": "Junho Yeo <i@junho.io>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
