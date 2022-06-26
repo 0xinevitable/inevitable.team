@@ -38,16 +38,32 @@ export default LandingPage;
 
 const Container = styled.div`
   min-height: 100vh;
+  width: 100vw;
+  padding-top: 156px;
   padding-bottom: 333px;
+  overflow: hidden;
 
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+
+  @media screen and (max-width: 432px) {
+    padding-top: 64px;
+    padding-bottom: 128px;
+  }
+
+  & * {
+    transition: all 0.3s ease-in-out;
+  }
 `;
 
 const Badge = styled.span`
-  margin-top: 156px;
   padding: 8px 9px;
   width: fit-content;
 
@@ -77,6 +93,27 @@ const Title = styled.span`
   line-height: 103%;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 36px;
+    font-size: 56px;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0 48px;
+  }
+
+  @media screen and (max-width: 760px) {
+    max-width: 720px;
+    padding: 0 32px;
+    font-size: 48px;
+  }
+
+  @media screen and (max-width: 432px) {
+    margin-top: 24px;
+    padding: 0 20px;
+    font-size: 36px;
+  }
 `;
 
 const Subtitle = styled.span`
@@ -88,6 +125,15 @@ const Subtitle = styled.span`
   line-height: 103%;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 156px;
+  }
+
+  @media screen and (max-width: 432px) {
+    margin-top: 124px;
+    font-size: 24px;
+  }
 `;
 
 const ProjectList = styled.div`
@@ -96,15 +142,23 @@ const ProjectList = styled.div`
 
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 432px) {
+    margin-top: 12px;
+  }
 `;
 const ProjectItem = styled.a`
   width: 478px;
   height: 239px;
-  transition: all 0.3s ease-in-out;
   position: relative;
 
   &:hover {
     transform: scale(1.06);
+  }
+
+  @media screen and (max-width: 432px) {
+    width: 318.6px;
+    height: 159.3px;
   }
 `;
 
@@ -122,6 +176,11 @@ const BentoImage = styled.img`
   bottom: 0;
 
   user-select: none;
+
+  @media screen and (max-width: 432px) {
+    width: ${318.6 + BLUR_SIZE * 2}px;
+    height: ${159.3 + BLUR_SIZE * 2}px;
+  }
 `;
 
 const PHASES = [undefined, 'Launch', 'Expend', 'Terraform', undefined];
@@ -132,6 +191,31 @@ const PhaseList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 56px;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 96px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    padding: 0 56px;
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+    justify-content: center;
+    transform: scale(0.85);
+  }
+
+  @media screen and (max-width: 400px) {
+    transform: scale(0.7);
+  }
 `;
 const PhaseItem = styled.li`
   display: flex;
@@ -142,6 +226,11 @@ const PhaseImage = styled.img`
   width: 100px;
   height: 100px;
   user-select: none;
+
+  @media screen and (max-width: 460px) {
+    width: 88px;
+    height: 88px;
+  }
 `;
 const PhaseTitle = styled.span`
   margin-top: 20px;
@@ -153,4 +242,9 @@ const PhaseTitle = styled.span`
   line-height: 100%;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (max-width: 460px) {
+    margin-top: 12px;
+    font-size: 14px;
+  }
 `;
