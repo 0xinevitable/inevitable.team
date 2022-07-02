@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { MetaHead } from '@/components/MetaHead';
+
 const LandingPage: React.FC = () => {
   return (
     <Container>
+      <MetaHead />
       <Badge>WE ARE INEVITABLE</Badge>
       <Title>
         Inevitable is a organization
