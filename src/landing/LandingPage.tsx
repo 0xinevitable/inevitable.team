@@ -186,7 +186,7 @@ const BentoImage = styled.img`
   }
 `;
 
-const PHASES = [undefined, 'Launch', 'Expend', 'Terraform', undefined];
+const PHASES = [undefined, 'Launch', 'Expand', 'Terraform', undefined];
 const PhaseList = styled.ul`
   margin-top: 128px;
   list-style-type: none;
