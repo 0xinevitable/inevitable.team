@@ -28,6 +28,7 @@ export const GlobalStyle: any = createGlobalStyle`
 
   img {
     -webkit-user-drag: none;
+    user-select: none;
   }
 
   button {

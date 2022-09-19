@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,14 +22,25 @@ const LandingPage: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <BentoImage src="/assets/bento.png" />
+          <BentoImage
+            src="/assets/bento.png"
+            width={BENTO_IMAGE_WIDTH * 2}
+            height={BENTO_IMAGE_HEIGHT * 2}
+          />
         </ProjectItem>
       </ProjectList>
 
       <PhaseList>
         {PHASES.map((title, index) => (
           <PhaseItem key={index}>
-            <PhaseImage src={`/assets/phase-${index + 1}.png`} />
+            <PhaseImageContainer>
+              <Image
+                alt={title}
+                src={`/assets/phase-${index + 1}.png`}
+                width={100}
+                height={100}
+              />
+            </PhaseImageContainer>
             <PhaseTitle>{title}</PhaseTitle>
           </PhaseItem>
         ))}
@@ -166,10 +178,12 @@ const ProjectItem = styled.a`
 `;
 
 const BLUR_SIZE = 95.6;
-const BentoImage = styled.img`
+const BENTO_IMAGE_WIDTH = 478 + BLUR_SIZE * 2;
+const BENTO_IMAGE_HEIGHT = 239 + BLUR_SIZE * 2;
+const BentoImage = styled(Image)`
   margin: ${-BLUR_SIZE}px;
-  width: ${478 + BLUR_SIZE * 2}px;
-  height: ${239 + BLUR_SIZE * 2}px;
+  width: ${BENTO_IMAGE_WIDTH}px;
+  height: ${BENTO_IMAGE_HEIGHT}px;
   pointer-events: none;
 
   position: absolute;
@@ -177,8 +191,6 @@ const BentoImage = styled.img`
   left: 0;
   right: 0;
   bottom: 0;
-
-  user-select: none;
 
   @media screen and (max-width: 432px) {
     width: ${318.6 + BLUR_SIZE * 2}px;
@@ -225,10 +237,9 @@ const PhaseItem = styled.li`
   flex-direction: column;
   align-items: center;
 `;
-const PhaseImage = styled.img`
+const PhaseImageContainer = styled.div`
   width: 100px;
   height: 100px;
-  user-select: none;
 
   @media screen and (max-width: 460px) {
     width: 88px;
