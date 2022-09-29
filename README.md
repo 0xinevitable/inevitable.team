@@ -1,8 +1,6 @@
 # inevitable.team
 
-Inevitable is a organization that shapes the future
-
-[![Landing Preview](https://github.com/inevitable-changes/inevitable.team/blob/main/docs/images/preview.png?raw=true)](https://inevitable.team)
+[Inevitable](https://inevitable.team) is a organization that shapes the future
 
 ## 🚀 Development
 
