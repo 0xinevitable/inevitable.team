@@ -14,7 +14,7 @@ const LandingPage: React.FC = () => {
         <br />
         that shapes the future
       </Title>
-      <Subtitle>Infra</Subtitle>
+      <Subtitle>Web3</Subtitle>
       <ProjectList>
         <ProjectItem
           title="Bento"
@@ -29,6 +29,22 @@ const LandingPage: React.FC = () => {
           />
         </ProjectItem>
       </ProjectList>
+      <Notes>Klaymakers22 Finalist</Notes>
+
+      <Subtitle>Next Up</Subtitle>
+      <div style={{ marginTop: 32 }}>
+        <Image
+          alt=""
+          src="/assets/next-up.png"
+          width={280}
+          height={400}
+          style={{
+            borderRadius: 32,
+            objectFit: 'cover',
+            filter: 'invert(1) grayscale(1) opacity(0.8)',
+          }}
+        />
+      </div>
 
       <PhaseList>
         {PHASES.map((title, index) => (
@@ -55,7 +71,7 @@ const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
   padding-top: 156px;
-  padding-bottom: 333px;
+  padding-bottom: 200px;
   overflow: hidden;
 
   position: relative;
@@ -132,7 +148,7 @@ const Title = styled.span`
 `;
 
 const Subtitle = styled.span`
-  margin-top: 232px;
+  margin-top: 100px;
 
   font-family: 'Poppins';
   font-weight: 500;
@@ -141,18 +157,19 @@ const Subtitle = styled.span`
   text-align: center;
   color: #ffffff;
 
-  @media screen and (max-width: 1200px) {
-    margin-top: 156px;
-  }
-
   @media screen and (max-width: 432px) {
-    margin-top: 124px;
     font-size: 24px;
   }
 `;
+const Notes = styled.span`
+  margin-top: 20px;
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+`;
 
 const ProjectList = styled.div`
-  margin-top: 24px;
+  margin-top: 12px;
   list-style-type: none;
 
   display: flex;
@@ -185,6 +202,8 @@ const BentoImage = styled(Image)`
   width: ${BENTO_IMAGE_WIDTH}px;
   height: ${BENTO_IMAGE_HEIGHT}px;
   pointer-events: none;
+
+  filter: saturate(110%);
 
   position: absolute;
   top: 0;
