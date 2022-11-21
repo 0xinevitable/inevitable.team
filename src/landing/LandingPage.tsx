@@ -29,7 +29,14 @@ const LandingPage: React.FC = () => {
           />
         </ProjectItem>
       </ProjectList>
-      <Notes>Klaymakers22 Finalist</Notes>
+      <Notes>
+        <span className="hack">Klaymakers22</span>
+        <span className="prize">The Fi+ Track 1st Place</span>
+      </Notes>
+      <Notes style={{ marginTop: 12 }}>
+        <span className="hack">Klaymakers22</span>
+        <span className="prize">The Ground X Challenge Winner</span>
+      </Notes>
 
       <Subtitle>Next Up</Subtitle>
       <div style={{ marginTop: 32 }}>
@@ -161,11 +168,28 @@ const Subtitle = styled.span`
     font-size: 24px;
   }
 `;
-const Notes = styled.span`
+const Notes = styled.div`
   margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
   font-family: 'Poppins';
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  z-index: 2;
+
+  span.hack {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  span.prize {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+  }
 `;
 
 const ProjectList = styled.div`
