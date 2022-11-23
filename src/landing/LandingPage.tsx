@@ -31,7 +31,7 @@ const LandingPage: React.FC = () => {
       </ProjectList>
       <Notes>
         <span className="hack">Klaymakers22</span>
-        <span className="prize">The Fi+ Track 1st Place</span>
+        <span className="prize">The Fi+ Track 2nd Place</span>
       </Notes>
       <Notes style={{ marginTop: 12 }}>
         <span className="hack">Klaymakers22</span>
