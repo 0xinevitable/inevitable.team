@@ -39,7 +39,15 @@ const LandingPage: React.FC = () => {
       </Notes>
 
       <Subtitle>Next Up</Subtitle>
-      <div style={{ marginTop: 32 }}>
+      <div
+        style={{
+          marginTop: 32,
+          marginLeft: 12,
+          marginRight: 12,
+          display: 'flex',
+          gap: 8,
+        }}
+      >
         <Image
           alt=""
           src="/assets/next-up.png"
@@ -49,6 +57,17 @@ const LandingPage: React.FC = () => {
             borderRadius: 32,
             objectFit: 'cover',
             filter: 'invert(1) grayscale(1) opacity(0.8)',
+          }}
+        />
+        <Image
+          alt=""
+          src="/assets/car.webp"
+          width={280}
+          height={400}
+          style={{
+            borderRadius: 32,
+            objectFit: 'cover',
+            filter: 'grayscale(1) opacity(0.8)',
           }}
         />
       </div>
@@ -243,7 +262,7 @@ const BentoImage = styled(Image)`
 
 const PHASES = [undefined, 'Launch', 'Expand', 'Terraform', undefined];
 const PhaseList = styled.ul`
-  margin-top: 128px;
+  margin-top: 64px;
   list-style-type: none;
 
   display: flex;
