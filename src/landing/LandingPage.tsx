@@ -2,11 +2,14 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
+import { Gradient } from '@/components/Gradient';
 import { MetaHead } from '@/components/MetaHead';
 
 const LandingPage: React.FC = () => {
   return (
     <Container>
+      <Gradient />
+
       <MetaHead />
       <Badge>WE ARE INEVITABLE</Badge>
       <Title>
@@ -101,6 +104,8 @@ const Container = styled.div`
   overflow: hidden;
 
   position: relative;
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,6 +231,7 @@ const ProjectItem = styled.a`
   width: 478px;
   height: 239px;
   position: relative;
+  z-index: 1;
 
   &:hover {
     transform: scale(1.06);
