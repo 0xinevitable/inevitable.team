@@ -13,7 +13,7 @@ const LandingPage: React.FC = () => {
       <MetaHead />
       <Badge>WE ARE INEVITABLE</Badge>
       <Title>
-        Inevitable is a organization
+        Inevitable is an organization
         <br />
         that shapes the future
       </Title>

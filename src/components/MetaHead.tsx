@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 const meta = {
   title: 'INEVITABLE',
-  description: 'Inevitable is a organization that shapes the future',
+  description: 'Inevitable is an organization that shapes the future',
   image: 'https://inevitable.team/assets/og-image.png',
   url: 'https://inevitable.team',
 };

@@ -1,6 +1,6 @@
 # inevitable.team
 
-[Inevitable](https://inevitable.team) is a organization that shapes the future
+[Inevitable](https://inevitable.team) is an organization that shapes the future
 
 ## 🚀 Development
 
