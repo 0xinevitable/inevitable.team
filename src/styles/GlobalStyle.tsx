@@ -7,6 +7,7 @@ export const GlobalStyle: any = createGlobalStyle`
   * {
     box-sizing: border-box;
     word-break: keep-all;
+    font-family: 'Poppins', sans-serif;
   }
 
   html, body {
