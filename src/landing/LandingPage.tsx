@@ -2,14 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Gradient } from '@/components/Gradient';
 import { MetaHead } from '@/components/MetaHead';
 
 const LandingPage: React.FC = () => {
   return (
     <Container>
-      <Gradient />
-
       <MetaHead />
       <Badge>WE ARE INEVITABLE</Badge>
       <Title>
@@ -17,61 +14,65 @@ const LandingPage: React.FC = () => {
         <br />
         that shapes the future
       </Title>
-      <Subtitle>Web3</Subtitle>
-      <ProjectList>
-        <ProjectItem
-          title="Bento"
-          href="https://bento.finance"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BentoImage
-            src="/assets/bento.png"
-            width={BENTO_IMAGE_WIDTH * 2}
-            height={BENTO_IMAGE_HEIGHT * 2}
-          />
-        </ProjectItem>
-      </ProjectList>
-      <Notes>
-        <span className="hack">Klaymakers22</span>
-        <span className="prize">The Fi+ Track 2nd Place</span>
-      </Notes>
-      <Notes style={{ marginTop: 12 }}>
-        <span className="hack">Klaymakers22</span>
-        <span className="prize">The Ground X Challenge Winner</span>
-      </Notes>
 
-      <Subtitle>Next Up</Subtitle>
       <div
         style={{
           marginTop: 32,
-          marginLeft: 12,
-          marginRight: 12,
+          width: '100%',
           display: 'flex',
-          gap: 8,
+          flexDirection: 'column',
+          gap: 20,
         }}
       >
+        <Paragraph>
+          We build crypto, consumer products, and web services to accelerate
+          inevitable changes.
+        </Paragraph>
+        <Paragraph>
+          We help blockchains and protocols bootstrap liquidity and user
+          experience, focusing on AMMs, Lending, DEX/Data Aggregation,
+          Dashboards, Privacy, Automation, Validaters, etc.
+        </Paragraph>
+        <Paragraph>
+          <a
+            href="https://twitter.com/0xinevitable"
+            target="_blank"
+            style={{ color: 'white', textDecoration: 'underline' }}
+          >
+            Twitter
+          </a>
+        </Paragraph>
+      </div>
+
+      <Subtitle>Archivements</Subtitle>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <ProjectList>
+          <ProjectItem
+            title="Bento"
+            href="https://bento.finance"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BentoImage
+              alt=""
+              src="/assets/bento.png"
+              width={BENTO_IMAGE_WIDTH * 2}
+              height={BENTO_IMAGE_HEIGHT * 2}
+            />
+          </ProjectItem>
+        </ProjectList>
         <Image
-          alt=""
-          src="/assets/next-up.png"
-          width={280}
-          height={400}
-          style={{
-            borderRadius: 32,
-            objectFit: 'cover',
-            filter: 'invert(1) grayscale(1) opacity(0.8)',
-          }}
-        />
-        <Image
-          alt=""
-          src="/assets/car.webp"
-          width={280}
-          height={400}
-          style={{
-            borderRadius: 32,
-            objectFit: 'cover',
-            filter: 'grayscale(1) opacity(0.8)',
-          }}
+          src="/assets/awards.svg"
+          alt="Klaymakers22 Fi+ Track 2nd Place & The Ground X Challenge Winner"
+          width="399"
+          height="90"
+          style={{ width: '100%', maxWidth: 399, height: 'auto' }}
         />
       </div>
 
@@ -99,8 +100,8 @@ export default LandingPage;
 const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
-  padding-top: 156px;
-  padding-bottom: 200px;
+  margin: 0 auto;
+  padding: 156px 16px 200px;
   overflow: hidden;
 
   position: relative;
@@ -108,7 +109,8 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 700px;
+  width: 100%;
 
   @media screen and (max-width: 1200px) {
     padding-top: 100px;
@@ -149,71 +151,33 @@ const Badge = styled.span`
 const Title = styled.span`
   margin-top: 54px;
 
-  font-family: 'Poppins';
-  font-weight: 900;
-  font-size: 64px;
-  line-height: 103%;
-  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: left;
   color: #ffffff;
-
-  @media screen and (max-width: 1200px) {
-    margin-top: 36px;
-    font-size: 56px;
-  }
-
-  @media screen and (max-width: 900px) {
-    padding: 0 48px;
-  }
-
-  @media screen and (max-width: 760px) {
-    max-width: 720px;
-    padding: 0 32px;
-    font-size: 48px;
-  }
-
-  @media screen and (max-width: 432px) {
-    margin-top: 24px;
-    padding: 0 20px;
-    font-size: 36px;
-  }
 `;
 
 const Subtitle = styled.span`
   margin-top: 100px;
 
-  font-family: 'Poppins';
   font-weight: 500;
   font-size: 32px;
   line-height: 103%;
   text-align: center;
-  color: #ffffff;
+  color: white;
 
   @media screen and (max-width: 432px) {
     font-size: 24px;
   }
 `;
-const Notes = styled.div`
-  margin-top: 20px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
-  font-family: 'Poppins';
-  text-align: center;
-  z-index: 2;
-
-  span.hack {
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  span.prize {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 600;
-  }
+const Paragraph = styled.p`
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 22px;
+  width: 100%;
+  line-height: 1.4;
 `;
 
 const ProjectList = styled.div`
@@ -268,7 +232,7 @@ const BentoImage = styled(Image)`
 
 const PHASES = [undefined, 'Launch', 'Expand', 'Terraform', undefined];
 const PhaseList = styled.ul`
-  margin-top: 64px;
+  margin-top: 120px;
   list-style-type: none;
 
   display: flex;
@@ -317,7 +281,6 @@ const PhaseImageContainer = styled.div`
 const PhaseTitle = styled.span`
   margin-top: 20px;
 
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

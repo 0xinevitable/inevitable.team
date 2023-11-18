@@ -1,5 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'styled-normalize';
+import {Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  display: 'swap',
+  style: 'normal',
+  subsets: ['latin'],
+  weight: ['400', '500', '800']
+});
 
 export const GlobalStyle: any = createGlobalStyle`
   ${normalize}
@@ -7,7 +15,7 @@ export const GlobalStyle: any = createGlobalStyle`
   * {
     box-sizing: border-box;
     word-break: keep-all;
-    font-family: 'Poppins', sans-serif;
+    font-family: ${poppins.style.fontFamily}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   html, body {
